@@ -158,24 +158,24 @@ print(dense.forward(np.array([[1,2,3]])))  # Should compute matrix product
 ---
 
 ### **Problem 5: Singleton Database Connection Pool**
-**Task**: Implement a thread-safe singleton `DatabasePool` class with connection limits.  
+**Task**: Implement a singleton `DatabasePool` class with connection limits.  
 **Requirements**:  
 - Maximum 5 connections  
 - Track active connections  
 - Raise custom error when pool exhausted  
 
 ```python
-import threading
+
 
 class DatabasePoolError(Exception):
     pass
 
 class DatabasePool:
     _instance = None
-    _lock = threading.Lock()
+    # logic
     
     def __new__(cls):
-        # Implement singleton with thread safety
+        # Implement singleton 
         pass
     
     def __init__(self):
@@ -202,5 +202,5 @@ These problems test:
 2. Observer pattern implementation  
 3. Multiple inheritance and method resolution order (MRO)  
 4. Abstract base classes for ML components  
-5. Singleton pattern with thread safety  
+5. Singleton pattern 
 
